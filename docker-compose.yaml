@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:1.23.4-alpine
+    ports:
+      - 127.0.0.1:8080:80
+    volumes:
+      # Our init script for Nginx, run chmod u+x init.sh to make it executable
+      - ./init.sh:/docker-entrypoint.d/init.sh
+      # The configuration file.
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      # The path to JS modules.
+      - ./njs:/etc/nginx/njs
+    environment:
+      JWT_GEN_KEY: $JWT_GEN_KEY
