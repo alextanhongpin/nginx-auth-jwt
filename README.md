@@ -27,5 +27,8 @@ $ curl -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOi
 ```
 
 
+## References
 
-https://github.com/nginx/njs-examples#jwt
+- https://github.com/nginx/njs-examples#jwt
+- https://www.nginx.com/blog/deploying-nginx-plus-as-an-api-gateway-part-1/
+- https://www.nginx.com/blog/deploying-nginx-plus-as-an-api-gateway-part-2-protecting-backend-services/#request-bodies
